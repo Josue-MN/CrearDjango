@@ -4,7 +4,7 @@ import datetime
 
 # Create your views here.
 def display(request):
-    return HttpResponse("<h1>Hola Mundo, and... Diegx... ♨🎂</h1>")
+    return HttpResponse("<h1>Hola Mundo, and...</h1>")
 
 def displayDatetime(request):
     dt = datetime.datetime.now()

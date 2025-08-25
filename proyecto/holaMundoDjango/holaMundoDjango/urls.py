@@ -24,6 +24,6 @@ urlpatterns = [
     path("hola/", vista.display),
     path("ahora/", vista.displayDatetime),
     path("", vista.display),
-    path("Diegx/", vista1.displayA)
+    path("hola2/", vista1.displayA)
 
 ]

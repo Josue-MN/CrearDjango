@@ -16,12 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from intento import views
+from secondApp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     #path("hola/", vista.display),
     #path("ahora/", vista.displayDatetime),
     #path("", vista.display),
-    path('hola2/', views.display)
+    path('hola/', views.display)
 ]

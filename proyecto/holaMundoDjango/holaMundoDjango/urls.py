@@ -15,11 +15,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 #from firstApp import views as vista
 #from intento import views as vista1
-from firstApp.views import display, displayDatetime
-from intento.views import display as display1
+
+#from firstApp.views import display, displayDatetime
+#from intento.views import display as display1
+
+from firstApp import views as firstApp
+from secondApp import views as secondApp
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,8 +31,10 @@ urlpatterns = [
     #path("ahora/", vista.displayDatetime),
     #path("", vista.display),
     #path("hola2/", vista1.displayA)
-    path('hola/', display),
-    path('ahora/', displayDatetime),
-    path('hola2/', display1)
+    #path('hola/', display),
+    #path('ahora/', displayDatetime),
+    #path('hola2/', display1)
+    path("firstApp/", include('firstApp.urls')),
+    path("secondApp/", include('secondApp.urls'))
 
 ]
